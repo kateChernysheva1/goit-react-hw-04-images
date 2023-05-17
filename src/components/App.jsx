@@ -128,6 +128,7 @@ export class App extends React.Component {
 
   closeModal = e => {
     if (e.target === e.currentTarget) {
+      document.removeEventListener('keydown', this.keyDown);
       this.setState({
         isModal: !this.state.isModal,
         modalData: {},
