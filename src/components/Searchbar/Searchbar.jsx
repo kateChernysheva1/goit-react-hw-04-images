@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import './Searchbar.css';
 import PropTypes from 'prop-types';
 
-export const Searchbar = ({ onSubmit }) => {
+const Searchbar = ({ onSubmit }) => {
   return (
     <header className="searchbar">
       <form className="form" onSubmit={onSubmit}>
@@ -25,3 +26,5 @@ export const Searchbar = ({ onSubmit }) => {
 Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
+
+export default memo(Searchbar);

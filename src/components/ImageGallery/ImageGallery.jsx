@@ -1,8 +1,9 @@
 import './ImageGallery.css';
+import { memo } from 'react';
 import PropTypes from 'prop-types';
-import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
+import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 
-export const ImageGallery = ({ images, onClickImage }) => {
+const ImageGallery = ({ images, onClickImage }) => {
   return (
     <>
       <ul className="gallery">
@@ -28,3 +29,5 @@ ImageGallery.propTypes = {
   ),
   onClickImage: PropTypes.func.isRequired,
 };
+
+export default memo(ImageGallery);

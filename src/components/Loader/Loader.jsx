@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './Loader.css';
 import { ThreeDots } from 'react-loader-spinner';
 
@@ -17,3 +18,5 @@ export const Loader = () => {
     </div>
   );
 };
+
+export default memo(Loader);

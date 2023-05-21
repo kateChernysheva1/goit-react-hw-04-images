@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import './Modal.css';
 import PropTypes from 'prop-types';
 
-export const Modal = ({ data, closeModal }) => {
+const Modal = ({ data, closeModal }) => {
   const { img, alt } = data;
 
   return (
@@ -20,3 +21,5 @@ Modal.propTypes = {
   }),
   closeModal: PropTypes.func.isRequired,
 };
+
+export default memo(Modal);
